@@ -30,11 +30,11 @@ cli:
 dist: generate
 	@mkdir -p ./dist
 	# Building Linux...
-	@GOOS=linux   GOARCH=amd64 go build -ldflags=$(LDFLAGS_DIST) -o dist/transfers-cli_linux_amd64   github.com/juztin/tzwallet/cmd/tzwallet
+	@GOOS=linux   GOARCH=amd64 go build -ldflags=$(LDFLAGS_DIST) -o dist/tzwallet_linux_amd64   github.com/juztin/tzwallet/cmd/tzwallet
 	# Building Mac...
-	@GOOS=darwin  GOARCH=amd64 go build -ldflags=$(LDFLAGS_DIST) -o dist/transfers-cli_darwin_amd64  github.com/juztin/tzwallet/cmd/tzwallet
+	@GOOS=darwin  GOARCH=amd64 go build -ldflags=$(LDFLAGS_DIST) -o dist/tzwallet_darwin_amd64  github.com/juztin/tzwallet/cmd/tzwallet
 	# Building Windows...
-	@GOOS=windows GOARCH=amd64 go build -ldflags=$(LDFLAGS_DIST) -o dist/transfers-cli_windows_amd64 github.com/juztin/tzwallet/cmd/tzwallet
+	@GOOS=windows GOARCH=amd64 go build -ldflags=$(LDFLAGS_DIST) -o dist/tzwallet_windows_amd64 github.com/juztin/tzwallet/cmd/tzwallet
 
 clean:
 	@rm -f ./bin/*
